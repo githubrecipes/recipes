@@ -11,17 +11,33 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  get_changed_files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find Changed files
+        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+      - name: Move diff files
+        run: |
+          mkdir output
+          for f in $CHANGED_FILES;
+          do
+            mv $f output/$f
+          done
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
   pandoc_build:
     container: pandoc/core:2.9
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: Install Git
-        run: apt-get install git
-      - name: Find changed files
-        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+      - name: Download Artifact files
+        uses: actions/download-artifact@master
+        with:
+          name: output
       - name: Make output folder
         run: mkdir output
       - name: Run pandoc
