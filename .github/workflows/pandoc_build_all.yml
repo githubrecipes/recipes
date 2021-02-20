@@ -10,13 +10,13 @@ on:
 jobs:
   get_changed_files:
     runs-on: ubuntu-latest
-    container: pandoc/core:2.9
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Find Markdown files
-        run: echo "MARKDOWN_FILES=$(find -type f -name "*.md")" >> $GITHUB_ENV
+      - name: Find Changed files
+        run: echo "CHANGED_FILES=$(find -type f -name "*.md")" >> $GITHUB_ENV
+        shell: bash
       - name: Move diff files
         run: |
           mkdir output
@@ -24,17 +24,48 @@ jobs:
           do
             mkdir output/$f
           done
-          for f in $MARKDOWN_FILES;
+          for f in $CHANGED_FILES;
           do
-            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./output/${f:0:-2}.html)"
+            mv $f output/$f
           done
         env:
           FOLDER_LIST: "./crockpot ./dessert"
+          MARKDOMN: .md
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: output
           path: output
-                
+  pandoc_build:
+    needs: get_changed_files
+    container: pandoc/core:2.9
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Download Artifact files
+        uses: actions/download-artifact@master
+        with:
+          name: output
+      - name: Make output folders
+        run: |
+          mkdir output
+          for f in $FOLDER_LIST;
+          do
+            mkdir output/$f
+          done
+        env:
+          FOLDER_LIST: "./crockpot ./dessert"
+      - name: Run pandoc
+        run: |
+          for f in $CHANGED_FILES;
+          do
+            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./output/${f:0:-2}.html)"
+          done
+          
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
                 
                 
