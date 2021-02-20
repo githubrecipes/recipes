@@ -21,14 +21,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: Make output folder
         run: mkdir output
       - name: Run pandoc
         run: |
           find ./ -iname "*.md" -type f -exec sh -c 'pandoc --standalone --css=styling.css --to=html5 "${0}" -o "./output/$(basename ${0%.md}.html)"' {} \;
       - name: Upload artifact
-      - uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@master
         with:
           name: output
           path: output
