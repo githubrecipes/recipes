@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           mkdir build
-          echo "set-env name=FILELIST::$(printf '"%s" ' *.md ./*/*.md)"
+          echo "FILELIST=$(printf '"%s" ' *.md ./*/*.md)" >> $GITHUB_ENV
           echo $FILELIST
           
       
