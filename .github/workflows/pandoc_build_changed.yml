@@ -1,0 +1,39 @@
+name: Pandoc build only changed files
+
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  pandoc_build:
+    container: pandoc/core:2.9
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Find changed files
+        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+      - name: Make output folder
+        run: mkdir output
+      - name: Run pandoc
+        run: |
+          for f in $CHANGED_FILES;
+          do
+            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./output/${f:0:-2}.html)"
+          done
+          
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
+                
+                
