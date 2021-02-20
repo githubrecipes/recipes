@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Find Changed files
-        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+        run: echo "CHANGED_FILES="$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})"" >> $GITHUB_ENV
         shell: bash
       - name: Move diff files
         run: |
