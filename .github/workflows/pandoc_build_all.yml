@@ -8,23 +8,34 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  pandoc_build:
-    container: pandoc/core:2.9
+  get_changed_files:
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    container: pandoc/core:2.9
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Make output folder
-        run: mkdir output
-      - name: Run pandoc
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Find Markdown files
+        run: echo "MARKDOWN_FILES=$(find -type f -name "*.md")" >> $GITHUB_ENV
+        shell: bash
+      - name: Move diff files
         run: |
-          find ./ -iname "*.md" -type f -exec sh -c 'pandoc --standalone --css=styling.css --to=html5 "${0}" -o "./output/$(basename ${0%.md}.html)"' {} \;
+          mkdir output
+          for f in $FOLDER_LIST;
+          do
+            mkdir output/$f
+          done
+          for f in $MARKDOWN_FILES;
+          do
+            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./output/${f:0:-2}.html)"
+          done
+        env:
+          FOLDER_LIST: "./crockpot ./dessert"
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: output
           path: output
+                
                 
                 
