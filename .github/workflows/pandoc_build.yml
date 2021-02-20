@@ -26,13 +26,17 @@ jobs:
           
       
       - uses: docker://pandoc/core:2.9
-        with:
-          args: >-
-                --standalone
-                --css=styling.css
-                --to=html5
-                ${{ env.FILELIST }}
-                --output=build/${{ env.FILELIST }}  
+      - run: |
+          for f in $FILELIST;
+          do pandoc -s --css=styling.css --to=html5 $f --output build/$f;
+          done
+#        with:
+#          args: >-
+#                --standalone
+#                --css=styling.css
+#                --to=html5
+#                ${{ env.FILELIST }}
+#                --output=build/${{ env.FILELIST }}  
       - uses: actions/upload-artifact@master
         with:
           name: build
