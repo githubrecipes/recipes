@@ -28,7 +28,8 @@ jobs:
       - uses: docker://pandoc/core:2.9
       - run: |
           for f in $FILELIST;
-          do pandoc -s --css=styling.css --to=html5 $f --output build/$f;
+          do
+            pandoc --standalone --css=styling.css --to=html5 $f --output build/$f;
           done
 #        with:
 #          args: >-
