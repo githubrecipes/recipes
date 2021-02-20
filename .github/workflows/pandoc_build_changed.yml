@@ -18,7 +18,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Find Changed files
-        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }} !(.github))" >> $GITHUB_ENV
       - name: Make folders
         run: FOLDER_LIST=`find . -type d -not -path "./.git/*" -not -path "./.git" -not -path "./.github" -not -path "./.github/*" -not -path .`
       - name: Move diff files
