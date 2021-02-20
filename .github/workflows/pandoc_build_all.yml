@@ -69,6 +69,7 @@ jobs:
           name: build
           path: build
   open_pr:
+    needs: pandoc_build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout github pages repo
