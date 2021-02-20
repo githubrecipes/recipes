@@ -1,3 +1,4 @@
+<title>README.md</title>
 # recipes
 Recipe repository
 

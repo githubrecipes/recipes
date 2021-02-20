@@ -1,3 +1,4 @@
+<title>Pecan Pie</title>
 # Pecan Pie | Prep: 10min | Cook: 1hr
 <table>
     <tr>
