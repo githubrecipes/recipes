@@ -30,6 +30,7 @@ jobs:
           name: output
           path: output
   pandoc_build:
+    needs: get_changed_files
     container: pandoc/core:2.9
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
