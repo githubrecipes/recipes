@@ -30,7 +30,6 @@ jobs:
           done
         env:
           FOLDER_LIST: "./crockpot ./dessert"
-          MARKDOMN: .md
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
