@@ -24,8 +24,8 @@
     - Beef broth
     - thyme
 (@) Cook
-    - high for 4 hours
-    - low for 8 hours
+    - high for **4 hours**
+    - low for **8 hours**
     - Until beef is falling apart
     </td>
     <td>
