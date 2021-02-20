@@ -29,6 +29,8 @@ jobs:
       - run: |
           for f in $FILELIST;
           do
+            echo $f
+            echo $FILELIST
             pandoc --standalone --css=styling.css --to=html5 $f --output build/$f;
           done
 #        with:
