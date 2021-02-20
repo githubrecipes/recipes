@@ -27,7 +27,7 @@ jobs:
       
       - uses: docker://pandoc/core:2.9
         with:
-          args: |>
+          args: |
                 --standalone
                 --css=styling.css
                 --to=html5
