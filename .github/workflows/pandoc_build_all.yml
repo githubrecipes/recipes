@@ -68,5 +68,27 @@ jobs:
         with:
           name: build
           path: build
+  open_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout github pages repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+          repository: githubrecipes/githubrecipes.github.io
+      - name: Download artifact
+        uses: actions/download-artifact@master
+        with:
+          name: output
+      - name: Open PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PAT }}
+          
+      
+        
+      
+      
+      
                 
                 
