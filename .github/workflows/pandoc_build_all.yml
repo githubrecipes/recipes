@@ -17,7 +17,6 @@ jobs:
           fetch-depth: 0
       - name: Find Markdown files
         run: echo "MARKDOWN_FILES=$(find -type f -name "*.md")" >> $GITHUB_ENV
-        shell: bash
       - name: Move diff files
         run: |
           mkdir output
