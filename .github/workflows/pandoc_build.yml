@@ -23,23 +23,17 @@ jobs:
       - run: |
           mkdir build
           echo "set-env name=FILELIST::$(printf '"%s" ' *.md ./*/*.md)"
+          echo $FILELIST
           
       
       - uses: docker://pandoc/core:2.9
-      - run: |
-          for f in $FILELIST;
-          do
-            echo $f
-            echo $FILELIST
-            pandoc --standalone --css=styling.css --to=html5 $f --output build/$f;
-          done
-#        with:
-#          args: >-
-#                --standalone
-#                --css=styling.css
-#                --to=html5
-#                ${{ env.FILELIST }}
-#                --output=build/${{ env.FILELIST }}  
+        with:
+          args: >-
+                --standalone
+                --css=styling.css
+                --to=html5
+                ${{ env.FILELIST }}
+                --output=build/${{ env.FILELIST }}
       - uses: actions/upload-artifact@master
         with:
           name: build
