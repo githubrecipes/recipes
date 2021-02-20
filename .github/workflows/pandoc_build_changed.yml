@@ -29,13 +29,12 @@ jobs:
           done
           for f in $CHANGED_FILES;
           do
-            if [[ "$f" == *"$MARKDOWN"* ]]; then
+            if [[ "$f" == *".md"* ]]; then
               mv $f output/$f
             fi
           done
         env:
           FOLDER_LIST: "./crockpot ./dessert"
-          MARKDOMN: .md
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
