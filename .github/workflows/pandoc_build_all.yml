@@ -28,6 +28,7 @@ jobs:
           do
             mv $f output/$f
           done
+          echo $CHANGED_FILES > output/changed.txt
         env:
           FOLDER_LIST: "./crockpot ./dessert"
       - name: Upload artifact
@@ -56,6 +57,7 @@ jobs:
           FOLDER_LIST: "./crockpot ./dessert"
       - name: Run pandoc
         run: |
+          CHANGED_FILES=`cat output/changed.txt`
           for f in $CHANGED_FILES;
           do
             pandoc --standalone --css=styling.css --to=html5 "$f" -o "./output/${f:0:-2}.html)"
