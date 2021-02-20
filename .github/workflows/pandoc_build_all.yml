@@ -1,4 +1,4 @@
-name: Pandoc build
+name: Build all MARKDOWN files
 
 
 # Controls when the action will run. 
@@ -66,7 +66,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: output
-          path: output
+          name: build
+          path: build
                 
                 
