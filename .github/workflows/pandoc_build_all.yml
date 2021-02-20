@@ -60,7 +60,7 @@ jobs:
           CHANGED_FILES=`cat changed.txt`
           for f in $CHANGED_FILES;
           do
-            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./build/${f:0:-2}.html)"
+            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./build/${f:0:-3}.html"
           done
           
       - name: Upload artifact
