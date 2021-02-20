@@ -48,19 +48,19 @@ jobs:
           name: output
       - name: Make output folders
         run: |
-          mkdir output
+          mkdir build
           for f in $FOLDER_LIST;
           do
-            mkdir output/$f
+            mkdir build/$f
           done
         env:
           FOLDER_LIST: "./crockpot ./dessert"
       - name: Run pandoc
         run: |
-          CHANGED_FILES=`cat output/changed.txt`
+          CHANGED_FILES=`cat changed.txt`
           for f in $CHANGED_FILES;
           do
-            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./output/${f:0:-2}.html)"
+            pandoc --standalone --css=styling.css --to=html5 "$f" -o "./build/${f:0:-2}.html)"
           done
           
       - name: Upload artifact
