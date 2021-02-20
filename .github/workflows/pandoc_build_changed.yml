@@ -20,8 +20,6 @@ jobs:
       - name: Find Changed files
         run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
         shell: bash
-      - name: Make folders
-        run: FOLDER_LIST=`find . -type d -not -path "./.git/*" -not -path "./.git" -not -path "./.github" -not -path "./.github/*" -not -path .`
       - name: Move diff files
         run: |
           mkdir output
@@ -33,6 +31,8 @@ jobs:
           do
             mv $f output/$f
           done
+        env:
+          FOLDER_LIST: "./crockpot ./dessert"
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
