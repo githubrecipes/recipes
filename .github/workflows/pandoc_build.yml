@@ -32,6 +32,10 @@ jobs:
                 --css=styling.css
                 --to=html5
                 ${{ env.FILELIST }}
-                --output=build/${{ env.FILELIST }}
+                --output=build/${{ env.FILELIST }}  
+      - uses: actions/upload-artifact@master
+        with:
+          name: build
+          path: build
                 
                 
