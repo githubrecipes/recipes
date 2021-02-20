@@ -4,7 +4,7 @@
     <tr>
         <td>
 ## Directions
-(@) Preheat oven to 350F
+(@) Preheat oven to **350F**
 (@) In a medium saucepan, combine:
     - white sugar
     - corn syrup
@@ -19,7 +19,7 @@
         + Vanilla
         + Pecans
 (@) Pour into pie shell
-(@) Bake in preheated oven for 45-50 minutes.
+(@) Bake in preheated oven for **45-50** minutes.
     </td>
     <td>
 ## Ingredients
