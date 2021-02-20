@@ -1,5 +1,6 @@
 name: Pandoc build
 
+
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
@@ -14,19 +15,12 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   pandoc_build:
+    container: pandoc/core:2.9
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: |
-          mkdir build
-          echo "FILELIST=$(printf '"%s" ' *.md ./*/*.md)" >> $GITHUB_ENV
-          echo $FILELIST
-          
-      
-      - uses: docker://pandoc/core:2.9
       - run: |
           find ./ -iname "*.md" -type f -exec sh -c 'pandoc --standalone --css=styling.css --to=html5 "${0}" -o "./output/$(basename ${0%.md}.html)"' {} \;
 
