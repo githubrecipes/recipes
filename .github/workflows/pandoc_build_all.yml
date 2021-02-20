@@ -80,7 +80,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@master
         with:
-          name: output
+          name: build
       - name: Open PR
         uses: peter-evans/create-pull-request@v3
         with:
