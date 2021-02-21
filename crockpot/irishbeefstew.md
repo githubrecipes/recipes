@@ -1,8 +1,8 @@
 <title>Crockpot Irish Beef Stew</title>
-# Irish beef stew1
-<table>
-    <tr>
-        <td>
+# Irish beef stew
+
+<div class="container">
+<div class="sidebyside">
 ## Directions
 (@) Combine and whisk
     - Salt
@@ -27,8 +27,9 @@
     - high for **4 hours**
     - low for **8 hours**
     - Until beef is falling apart
-    </td>
-    <td>
+</div>
+
+<div class="sidebyside">
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---: |
@@ -45,10 +46,8 @@
 | Potatoes | 2x | 1in pieces |
 | Beef broth | 3 cups |  |
 | Thyme |  | chopped |
-    </td>
-    </tr>
-</table>
-
+</div>
+</div>
 
 <div class="noprint">
 ## Adapted from: [Food Lion](https://www.foodlion.com/recipes/slow-cooker-irish-beef-stew/)
