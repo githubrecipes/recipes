@@ -38,7 +38,7 @@ Open a PR with your own correctly formatted recipe markdown files and it will be
     + If a direction 
     + For temperatures default to Fahrenheit temperatures
         * Bold all preheating instructions
-        * Bold temperatures and cooking times using the asterik (\*)
+        * Bold temperatures and cooking times using the double asterik (\*\**)
             * Eg: Cook at **350F** for **4 hours**
 - Metadata
     + The most important ones are the
@@ -90,10 +90,12 @@ Open a PR/issue suggesting changes and reasons why.
 ## Development
 To build the website locally:
 1. Clone this repo
+    
     `git clone https://github.com/githubrecipes/recipes.git`
 2. Install [`pandoc`](https://pandoc.org/installing.html)
 3. If you use [sublime text 3](https://www.sublimetext.com/3) you can open the folder as a project and just build (`Ctrl+b`) individual files.
 4. To build the file you're working on locally;
+    
     `pandoc -s --css=styling.css --to=html5 <input_file> -o <output_file>`
 5. Open the file in your web browser of choice.
 
