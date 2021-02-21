@@ -5,7 +5,7 @@ Open a PR with your own correctly formatted recipe markdown files and it will be
 ## Philosophy
 
 - No fluff
-    + If you feel compelled to add something extraneous to the recipe keep it within the `noprint` section
+    + If you feel compelled to add something extraneous to the recipe keep it within the `noprint` section.
 - Unambiguous directions
     + This is hard to define but you know it when you see it
     + The directions should be step by step
@@ -15,39 +15,48 @@ Open a PR with your own correctly formatted recipe markdown files and it will be
     + This is hard to judge but a good rule of thumb is keep your recipe and ingredient list together below around 50-60 lines.
 
 ## Style guide
+### Ingredient List
+Use the markdown table format as seen in the `template.md` file.
 
-- Use markdown tables for ingredient lists.
-    + Approved unit abbreviations
-        * Tablespoon->table
-        * Teaspoon->tea
-        * Pounds->lbs
-    + For items like vegetables/fruits use; <number>x format.
-    + Use units that can be inferred from packaging;
-    + Avoid unit conversion from those listed on packaging
-        * Americans find imperial units as confusing as everyone else.
-        * Don't ask for lbs when packages has the quantity listed in oz.
-    + Use fractions over decimals
-        * 1/2 cup not 0.5 cups
++ Approved unit abbreviations
+    * Tablespoon->table
+    * Teaspoon->tea
+    * Pounds->lbs
++ For items like vegetables/fruits use; \[1-4\]x format.
++ Use units that can be inferred from packaging;
++ Avoid unit conversion from those listed on packaging
+    * Americans find imperial units as confusing as everyone else.
+    * Don't ask for lbs when packages has the quantity listed in oz.
++ Use fractions over decimals
+    * 1/2 cup not 0.5 cups
 
-- Use numbered lists for directions
-    + If a direction uses multiple ingredients note each one on a separate sub-bullet like;
-    + Mix
-        * Onions
-        * Cheese
-        * Etc.
-    + If a direction 
-    + For temperatures default to Fahrenheit temperatures
-        * Bold all preheating instructions
-        * Bold temperatures and cooking times using the double asterik (\*\**)
-            * Eg: Cook at **350F** for **4 hours**
-- Metadata
-    + The most important ones are the
-        * `AUTHOR`
-        * `TITLE`
-        * `PREP`
-        * `COOK`
-    + These meta data tags are used to generate the index pages for each subdirectory. It is important they are included.
-    + In order for them to be detected the need to be in between the colon and the  semicolon.
+### Directions
+Use numbered lists for directions either manually (1., 2., etc) or with pandoc ssyntax ((@), (@), etc.).
++ If a direction uses multiple ingredients note each one on a separate sub-bullet like;
++ Mix
+    * Onions
+    * Cheese
+    * Etc.
++ If a direction 
++ For temperatures default to Fahrenheit temperatures
+    * Bold all preheating instructions
+    * Bold temperatures and cooking times using the double asterik (\*\**)
+        * Eg: Cook at **350F** for **4 hours**
+### Metadata
+These meta data tags are used to generate the index pages for each subdirectory. It is important they are included. In order for them to be detected the need to be in between the colon (`:`) and the semicolon (`;`).
+
+Required (currently the only ones used):
+* `AUTHOR:<persons name>;`
+* `TITLE:<the title to be used on the index page;`
+* `PREP:<prep time for the recipe>;`
+* `COOK:<cook time for the recipe>;`
+
+Optional (to be implemented):
+* `SERVES:<how many servings recommended amounts creates>;`
+* `CAL:<calories for recipe>;`
+* `SOCIALMEDIA:<link to be included if twitter intergration is implemented>;`
+
+
 
 
 ## Writing your own
@@ -68,11 +77,9 @@ If you want to preview how the file is going to look when published check out th
 
 You can create your own folder and file using the github.com interface. Only create your own folder if your recipe doesn't fall into the other categories.
 
-You can use any markdown feature that `pandoc` supports however I would say simpler is better.
+**Anything** that is not the ingredient list or direction list **must** be inside the `<div class="noprint">` which **must** be found at the bottom of the file. As you may have guessed from the class name, anything found in this section of the page will not show up when the user goes to print the recipe.
 
-**Anything** that is not the ingredient list or direction list **must** be inside the `<div class="noprint">` which **must** be found at the bottom of the file.
-
-As you may have guessed from the class name, anything found in this section of the page will not show up when the user goes to print the recipe.
+## Legality
 
 If you are adapting a recipe from one found online or in a cookbook/ on packaging **you must** include the original source it was adapted/inspired by.
 
