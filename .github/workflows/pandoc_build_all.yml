@@ -24,6 +24,7 @@ jobs:
           do
             mkdir output/$f
           done
+          mv stylish.css output/stylish.css
           for f in $CHANGED_FILES;
           do
             mv $f output/$f
