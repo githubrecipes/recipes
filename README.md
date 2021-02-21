@@ -40,6 +40,14 @@ Open a PR with your own correctly formatted recipe markdown files and it will be
         * Bold all preheating instructions
         * Bold temperatures and cooking times using the asterik (\*)
             * Eg: Cook at **350F** for **4 hours**
+- Metadata
+    + The most important ones are the
+        * `AUTHOR`
+        * `TITLE`
+        * `PREP`
+        * `COOK`
+    + These meta data tags are used to generate the index pages for each subdirectory. It is important they are included.
+    + In order for them to be detected the need to be in between the colon and the  semicolon.
 
 
 ## Writing your own
