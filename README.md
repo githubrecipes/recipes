@@ -42,6 +42,7 @@ Use numbered lists for directions either manually (1., 2., etc) or with pandoc s
     * Bold all preheating instructions
     * Bold temperatures and cooking times using the double asterik (\*\**)
         * Eg: Cook at **350F** for **4 hours**
+
 ### Metadata
 These meta data tags are used to generate the index pages for each subdirectory. It is important they are included. In order for them to be detected the need to be in between the colon (`:`) and the semicolon (`;`).
 
@@ -56,6 +57,7 @@ Optional (to be implemented):
 * `CAL:<calories for recipe>;`
 * `SOCIALMEDIA:<link to be included if twitter intergration is implemented>;`
 * `CREDIT:<link to adapted recipe>;`
+* `BAKE:<bake time (set and forget til timer)>;`
 
 
 
