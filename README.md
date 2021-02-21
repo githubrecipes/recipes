@@ -56,7 +56,9 @@ Open a PR with your own correctly formatted recipe markdown files and it will be
     - The filename should be descriptive while short.
 3. Copy the [template](https://raw.githubusercontent.com/githubrecipes/recipes/main/template.md) into the file
 4. Starting editing! Using the above style guide!
-5. Once you are satisfied (don't worry you can edit it later) scroll to the bottom of the page and Select `Create a new branch for this commit and start a pull request`.
+5. Once you are satisfied (don't worry you can edit it later) scroll to the bottom of the page and Select 
+
+    `Create a new branch for this commit and start a pull request`.
 6. Click `Propose new file`!
 7. Wait patiently for the PR to be approved
 
