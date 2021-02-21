@@ -1,3 +1,12 @@
+<!-- 
+AUTHOR:Sam Sebastian;
+TITLE:Crockpot Irish Beef stew;
+SOCIALMEDIA:;
+CREDIT:;
+PREP:15min;
+COOK:4-8hr;
+ -->
+
 <title>Crockpot Irish Beef Stew</title>
 # Irish beef stew
 

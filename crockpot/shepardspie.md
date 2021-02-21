@@ -1,3 +1,12 @@
+<!-- 
+AUTHOR:Sam Sebastian;
+TITLE:Crockpot Shepard's Pie;
+SOCIALMEDIA:;
+CREDIT:;
+PREP:20min;
+COOK:4-8hr;
+ -->
+
 <title>Crockpot Shepard's Pie</title>
 # Crockpot Shepard's Pie | Prep: 20min | Cook: 4-8 hours
 
@@ -47,11 +56,3 @@
 <div class="noprint">
 ## Adapted from: [Recipes that crock](https://www.recipesthatcrock.com/wprm_print/7898)
 </div>
-
-<!-- 
-AUTHOR:;
-SOCIALMEDIA:;
-CREDIT:;
-
-
- -->
