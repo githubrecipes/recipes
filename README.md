@@ -55,6 +55,7 @@ Optional (to be implemented):
 * `SERVES:<how many servings recommended amounts creates>;`
 * `CAL:<calories for recipe>;`
 * `SOCIALMEDIA:<link to be included if twitter intergration is implemented>;`
+* `CREDIT:<link to adapted recipe>;`
 
 
 
