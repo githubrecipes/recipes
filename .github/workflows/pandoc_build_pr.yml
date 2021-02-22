@@ -69,19 +69,6 @@ jobs:
         with:
           name: build
           path: build
-  comment_on_pr:
-    name: Open comment on PR with files
-    needs: pandoc_build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@master
-        with:
-          name: build
-      - name: Open PR
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.PAT }}
           
       
         
