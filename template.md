@@ -3,8 +3,8 @@ title: Title
 author: Author
 socialmedia:
 credit:
-prep: Xmin;
-cook: Yhr;
+prep: Xmin
+cook: Yhr
 ...
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%

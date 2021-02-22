@@ -3,8 +3,8 @@ title: Pecan Pie
 author: Sam Sebastian
 socialmedia:
 credit:
-prep: 10min;
-cook: 1hr;
+prep: 10min
+cook: 1hr
 ...
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
