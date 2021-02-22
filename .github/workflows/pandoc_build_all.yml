@@ -5,6 +5,13 @@ name: Pandoc build and PR
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    paths-ignore:
+      - '.github/**'
+  push:
+    paths:
+      - '*.md'
+
+
 env:
   FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner"
 
