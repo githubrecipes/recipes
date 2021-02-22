@@ -35,7 +35,7 @@ jobs:
           mv replacefilter.lua output/replacefilter.lua
           for f in $CHANGED_FILES;
           do
-            mv $f output/$f
+            python htmlgrep.py $f > output/$f
           done
           echo $CHANGED_FILES > output/changed.txt
       - name: Upload artifact
@@ -64,10 +64,9 @@ jobs:
       - name: Run pandoc
         run: |
           CHANGED_FILES=`cat changed.txt`
-          python -V
           for f in $CHANGED_FILES;
           do
-            python htmlgrep.py $f | pandoc --standalone --lua-filter=replacefilter.lua --css=https://githubrecipes.com/styling.css --to=html5 -o "./build/${f:0:-3}.html"
+            pandoc --standalone --lua-filter=replacefilter.lua --css=https://githubrecipes.com/styling.css --to=html5 -o "./build/${f:0:-3}.html" "$f"
           done
       - name: Upload artifact
         uses: actions/upload-artifact@master
