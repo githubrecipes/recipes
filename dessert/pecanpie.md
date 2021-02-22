@@ -9,8 +9,8 @@ cook: 1hr
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-<div class="container">
-<div class="sidebyside">
+%container%
+%sidebyside%
 ## Directions
 (@) Preheat oven to **350F**
 (@) In a medium saucepan, combine:
@@ -28,9 +28,9 @@ cook: 1hr
         + Pecans
 (@) Pour into pie shell
 (@) Bake in preheated oven for **45-50** minutes.
-</div>
+%enddiv%
 
-<div class="sidebyside">
+%sidebyside%
 ## Ingredients
 | Ingredients | Amount |
 | :---------: | :----: |
@@ -44,10 +44,10 @@ cook: 1hr
 | Vanilla Extract | 1 teaspoon |
 | Chopped Pecans | 1 and 1/4 cups |
 | Pie shell (9in) | 1 |
-</div>
-</div>
+%enddiv%
+%enddiv%
 
 
-<div class="noprint">
+%noprint%
 ## Adapted from: [All Recipes](https://www.allrecipes.com/recipe/9487/pecan-pie/)
-</div>
+%enddiv%

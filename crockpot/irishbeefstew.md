@@ -9,8 +9,8 @@ cook: 4-8hr
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-<div class="container">
-<div class="sidebyside">
+%container%
+%sidebyside%
 ## Directions
 (@) Combine and whisk
     - Salt
@@ -35,9 +35,9 @@ cook: 4-8hr
     - high for **4 hours**
     - low for **8 hours**
     - Until beef is falling apart
-</div>
+%enddiv%
 
-<div class="sidebyside">
+%sidebyside%
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---: |
@@ -54,12 +54,9 @@ cook: 4-8hr
 | Potatoes | 2x | 1in pieces |
 | Beef broth | 3 cups |  |
 | Thyme |  | chopped |
-</div>
-</div>
+%enddiv%
+%enddiv%
 
-<div class="noprint">
+%noprint%
 ## Adapted from: [Food Lion](https://www.foodlion.com/recipes/slow-cooker-irish-beef-stew/)
-    <div class="tags">
-#crockpot
-    </div>
-</div>
+%enddiv%

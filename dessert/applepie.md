@@ -7,8 +7,8 @@ cook: 45min
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-<div class="container">
-<div class="sidebyside">
+%container%
+%sidebyside%
 ## Directions
 (@) Preheat oven to **375F**
 (@) Combine in `small bowl`
@@ -33,9 +33,9 @@ cook: 45min
 (@) Remove foil
 (@) BAKE until crust is golden brown
     - **20-25min**
-</div>
+%enddiv%
 
-<div class="sidebyside">
+%sidebyside%
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---: |
@@ -50,10 +50,9 @@ cook: 45min
 | Pie Crust | 2x |  |
 | Butter | 1 table |  |
 | Egg | 1x | Large |
-</div>
-</div>
+%enddiv%
+%enddiv%
 
-
-<div class="noprint">
+%noprint%
 ## Adapted from: [Taste of Home](https://www.tasteofhome.com/recipes/apple-pie/)
-</div>
+%enddiv%

@@ -9,14 +9,14 @@ cook: Yhr
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-<div class="container">
-<div class="sidebyside">
+%container%
+%sidebyside%
 ## Directions
 (@) Use this format for numbered instructions
 (@) The table tags make the ingredient list and directions appear side by side.
-</div>
+%enddiv%
 
-<div class="sidebyside">
+%sidebyside%
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---: |
@@ -25,11 +25,10 @@ cook: Yhr
 | Units | tablespoon |  |
 | Units | 1 teaspoon |  |
 | Units | 1x |  |
-</div>
-</div>
+%enddiv%
+%enddiv%
 
-
-<div class="noprint">
+%noprint%
     anything within this area will not show up when the user prints the recipe
 ## Adapted from: [All Recipes](https://www.allrecipes.com/recipe/9487/pecan-pie/)
-</div>
+%enddiv%
