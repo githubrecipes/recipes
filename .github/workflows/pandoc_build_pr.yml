@@ -20,9 +20,7 @@ jobs:
         run: |
           echo $GITHUB_REF
           git checkout $GITHUB_BASE_REF
-          git pull
           git checkout $GITHUB_HEAD_REF
-          git pull
           echo "CHANGED_FILES=$(git diff --name-only $GITHUB_BASE_REF..$GITHUB_HEAD_REF)" >> $GITHUB_ENV
         
         shell: bash
