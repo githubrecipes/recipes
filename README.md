@@ -22,7 +22,7 @@ Use the markdown table format as seen in the `template.md` file.
     * Tablespoon->table
     * Teaspoon->tea
     * Pounds->lbs
-+ For items like vegetables/fruits use; \[1-4\]x format.
++ For items like vegetables/fruits; use \[1-4\]x format.
 + Use units that can be inferred from packaging;
 + Avoid unit conversion from those listed on packaging
     * Americans find imperial units as confusing as everyone else.
@@ -31,7 +31,7 @@ Use the markdown table format as seen in the `template.md` file.
     * 1/2 cup not 0.5 cups
 
 ### Directions
-Use numbered lists for directions either manually (1., 2., etc) or with pandoc ssyntax ((@), (@), etc.).
+Use numbered lists for directions either manually (1., 2., etc) or with pandoc syntax ((@), (@), etc.).
 + If a direction uses multiple ingredients note each one on a separate sub-bullet like;
 + Mix
     * Onions
@@ -46,14 +46,13 @@ Use numbered lists for directions either manually (1., 2., etc) or with pandoc s
 ### Metadata
 These metadata tags are used to generate the index pages for each subdirectory. It is important they are included at the top of the file in the same format laid out in the template and below!!!
 
-Required:
+Only the first four are required. The rest are not currently used but maybe in the future.
 ```
 ---
 author: <persons name>
 title: <the title to be used on the index page>
 prep: <prep time for the recipe>
 cook: <cook time for the recipe>
-optional: <you can use your own the following are things i will probably use in some way in the future>
 serves: <how many servings recommended amounts creates>
 cal: <calories for recipe>
 socialmedia: <link to be included if twitter intergration is implemented>
