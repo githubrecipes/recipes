@@ -20,7 +20,9 @@ jobs:
       - name: Find Changed files
         run: |
           git checkout ${{ github.base_ref }}
+          git pull
           git checkout ${{ github.head_ref }}
+          git pull
           echo "CHANGED_FILES=$(git diff --name-only ${{ github.head_ref }}..${{ github.base_ref }})" >> $GITHUB_ENV
         
         shell: bash
