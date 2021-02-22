@@ -13,13 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-#           ref: ${{ github.ref }}
           fetch-depth: 0
       - name: Setup Python
         uses: actions/setup-python@v2.2.1
       - name: Find Changed files
         run: |
           echo $GITHUB_REF
+          git checkout $GITHUB_BASE_REF
+          git pull
+          git checkout $GITHUB_HEAD_REF
+          git pull
           echo "CHANGED_FILES=$(git diff --name-only $GITHUB_BASE_REF..$GITHUB_HEAD_REF)" >> $GITHUB_ENV
         
         shell: bash
