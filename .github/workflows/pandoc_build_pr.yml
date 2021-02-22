@@ -20,7 +20,7 @@ jobs:
       - name: Find Changed files
         run: |
           echo $GITHUB_REF
-          echo "CHANGED_FILES=$(git diff --name-only $GITHUB_SHA..$GITHUB_REF)" >> $GITHUB_ENV
+          echo "CHANGED_FILES=$(git diff --name-only $GITHUB_BASE_REF..$GITHUB_HEAD_REF)" >> $GITHUB_ENV
         
         shell: bash
       - name: Move diff files
