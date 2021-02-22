@@ -661,3 +661,6 @@ figcaption {
     border-bottom: none
 }
 
+#title-block-header {
+    display: none;
+}
