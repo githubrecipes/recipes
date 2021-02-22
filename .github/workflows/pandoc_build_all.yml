@@ -66,7 +66,7 @@ jobs:
           CHANGED_FILES=`cat changed.txt`
           for f in $CHANGED_FILES;
           do
-            pandoc --standalone --lua-filter=replacefilter.lua --css=https://githubrecipes.com/styling.css --to=html5 "$f" -o "./build/${f:0:-3}.html"
+            python htmlgrep.py $f | pandoc --standalone --lua-filter=replacefilter.lua --css=https://githubrecipes.com/styling.css --to=html5 -o "./build/${f:0:-3}.html"
           done
       - name: Upload artifact
         uses: actions/upload-artifact@master
