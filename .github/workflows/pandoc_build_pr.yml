@@ -19,8 +19,8 @@ jobs:
         uses: actions/setup-python@v2.2.1
       - name: Find Changed files
         run: |
-          echo ${{ github.pull_request }}
-          echo "CHANGED_FILES=$(git diff --name-only ${{ github.pull_request.head.sha }}..${{ github.pull_request.base.sha }})" >> $GITHUB_ENV
+          echo $GITHUB_REF
+          echo "CHANGED_FILES=$(git diff --name-only $GITHUB_SHA..$GITHUB_REF)" >> $GITHUB_ENV
         
         shell: bash
       - name: Move diff files
