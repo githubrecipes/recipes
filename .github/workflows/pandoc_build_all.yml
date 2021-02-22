@@ -1,14 +1,16 @@
-name: Build all MARKDOWN files
+name: Pandoc build and PR
 
 
 # Controls when the action will run. 
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+env:
+  FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  get_changed_files:
+  Get list of changed files:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -34,15 +36,13 @@ jobs:
             mv $f output/$f
           done
           echo $CHANGED_FILES > output/changed.txt
-        env:
-          FOLDER_LIST: "./crockpot ./dessert"
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: output
           path: output
-  pandoc_build:
-    needs: get_changed_files
+  Pandoc build:
+    needs: Get list of changed files
     container: pandoc/core:2.9
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -58,8 +58,7 @@ jobs:
           do
             mkdir build/$f
           done
-        env:
-          FOLDER_LIST: "./crockpot ./dessert"
+          mv styling.css build/styling.css
       - name: Run pandoc
         run: |
           CHANGED_FILES=`cat changed.txt`
@@ -67,14 +66,13 @@ jobs:
           do
             pandoc --standalone --css=https://githubrecipes.com/styling.css --to=html5 "$f" -o "./build/${f:0:-3}.html"
           done
-          
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: build
           path: build
-  open_pr:
-    needs: pandoc_build
+  Open PR on github pages repo:
+    needs: Pandoc build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout github pages repo
