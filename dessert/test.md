@@ -1,1 +1,8 @@
+---
+title: Test
 
+...
+
+# %title%
+
+# Directions
