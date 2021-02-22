@@ -18,7 +18,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2.2.1
       - name: Find Changed files
-        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.ref }}..${{ github.base_ref }})" >> $GITHUB_ENV
+        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.head_ref }}..${{ github.base_ref }})" >> $GITHUB_ENV
         shell: bash
       - name: Move diff files
         run: |
