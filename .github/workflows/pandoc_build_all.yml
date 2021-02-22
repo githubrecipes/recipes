@@ -64,6 +64,7 @@ jobs:
       - name: Run pandoc
         run: |
           CHANGED_FILES=`cat changed.txt`
+          python -V
           for f in $CHANGED_FILES;
           do
             python htmlgrep.py $f | pandoc --standalone --lua-filter=replacefilter.lua --css=https://githubrecipes.com/styling.css --to=html5 -o "./build/${f:0:-3}.html"
