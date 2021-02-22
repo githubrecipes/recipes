@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-python@v2.2.1
       - name: Find Changed files
         run: |
+          git checkout ${{ github.base_ref }}
           git checkout ${{ github.head_ref }}
           echo "CHANGED_FILES=$(git diff --name-only ${{ github.head_ref }}..${{ github.base_ref }})" >> $GITHUB_ENV
         
