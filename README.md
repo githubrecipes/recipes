@@ -19,9 +19,9 @@ Open a PR with your own correctly formatted recipe markdown files and it will be
 Use the markdown table format as seen in the `template.md` file.
 
 + Approved unit abbreviations
-    * Tablespoon->table
-    * Teaspoon->tea
-    * Pounds->lbs
+    * `Tablespoon -> table`
+    * `Teaspoon -> tea`
+    * `Pounds -> lbs`
 + For items like vegetables/fruits; use \[1-4\]x format.
 + Use units that can be inferred from packaging;
 + Avoid unit conversion from those listed on packaging
@@ -126,7 +126,14 @@ You can open a PR in this Repo if you have any changes/suggestions for the CSS u
 I'll eventually add something that minimizes the CSS in the github action before committing to pages repo.
 
 ## TODO
-1. Minimize css for committing to pages repo
-2. Github action to build PR files so people can preview what it will look like
-3. Metadata system
-4. Twitter posting when new item added.
+1. Minimize CSS for committing to pages repo
+2. Favicon/icon for github recipes
+3. Github action to build PR files so people can preview what it will look like
+4. Metadata system
+5. Twitter posting when new item added.
+6. Main index page
+7. Titles on index pages!
+8. Back links
+9. "up in the file tree" links
+    IE clicking this on the pecan pie page brings you back to desserts
+10. View source function on each web page

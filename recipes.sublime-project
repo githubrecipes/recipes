@@ -11,13 +11,15 @@
             "name": "Github Recipes Pandoc",
             "working_dir": "${project_path}",
             "shell": true,
+            "selector": "*.md",
             // "cmd": ["/usr/bin/pandoc", "-s", "--css=styling.css", "--to=html5", "$file", "-o", "$file_base_name.html", ";",
             //         "/usr/bin/pandoc", "-s", "--css=styling.css", "--to=html5", "$file", "-o", "$file_base_name.pdf"]
             // ; /usr/bin/pandoc -f html $file_base_name.html -o $file_base_name.pdf" //pdf build
             // --include-in-header=header.html  header
             // "cmd": ["echo test"],
             // "cmd": ["/usr/bin/pandoc -s --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html $file"],
-            "cmd": ["/usr/bin/pandoc -s --lua-filter=$project_path/replacefilter.lua --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html $file"],
+            // "cmd": ["/usr/bin/pandoc -s --lua-filter=$project_path/replacefilter.lua --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html $file"],
+            "cmd": ["python htmlgrep.py $file | /usr/bin/pandoc -s --lua-filter=$project_path/replacefilter.lua --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html"],
             // "cmd": ["/usr/bin/pandoc -s --css=http://githubrecipes.com/styling.css --to=html5 $file -o $file_path/$file_base_name.html"]
         }
     ]

@@ -9,8 +9,8 @@ cook: 4-8hr
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-<div class="container">
-<div class="sidebyside">
+%container%
+%sidebyside%
 ## Directions
 (@) Brown ground beef with onions in skillet
 (@) Prep potatoes
@@ -32,9 +32,9 @@ cook: 4-8hr
 (@) Cover and cook
     - high for 4 hours
     - low for 8 hours
-</div>
+%enddiv%
 
-<div class="sidebyside">
+%sidebyside%
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---------: |
@@ -49,9 +49,9 @@ cook: 4-8hr
 | Frozen peas | 12 oz |  |
 | Cream of mushroom soup | 10.5 oz |  |
 | Paprika | Sprinkling | Optional |
-</div>
-</div>
+%enddiv%
+%enddiv%
 
-<div class="noprint">
+%noprint%
 ## Adapted from: [Recipes that crock](https://www.recipesthatcrock.com/wprm_print/7898)
-</div>
+%enddiv%
