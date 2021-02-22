@@ -1,14 +1,13 @@
-<!-- 
-AUTHOR:Sam Sebastian;
-TITLE:Crockpot Irish Beef stew;
-SOCIALMEDIA:;
-CREDIT:;
-PREP:15min;
-COOK:4-8hr;
- -->
+---
+author: Sam Sebastian
+title: Crockpot Irish Beef stew
+socialmedia:
+credit:
+prep: 15min
+cook: 4-8hr
+...
 
-<title>Crockpot Irish Beef Stew</title>
-# Irish beef stew
+# %title% | %author% | Prep: %prep% | Cook: %cook%
 
 <div class="container">
 <div class="sidebyside">

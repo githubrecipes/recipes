@@ -1,12 +1,13 @@
-<!-- 
-AUTHOR:;
-TITLE:;
-PREP:;
-COOK:;
- -->
+---
+title: Title
+author: Author
+socialmedia:
+credit:
+prep: Xmin;
+cook: Yhr;
+...
 
-<title>Webpage title</title>
-# Title of recipe
+# %title% | %author% | Prep: %prep% | Cook: %cook%
 
 <div class="container">
 <div class="sidebyside">
@@ -17,13 +18,13 @@ COOK:;
 
 <div class="sidebyside">
 ## Ingredients
-| Ingredients | Amount |
-| :---------: | :----: |
-| Item | 1 cups |
-| Units | cup |
-| Units | tablespoon |
-| Units | 1 teaspoon |
-| Units | 1x |
+| Ingredients | Amount | Notes |
+| :---------: | :----: | :---: |
+| Item | 1 cups | chopped |
+| Units | cup |  |
+| Units | tablespoon |  |
+| Units | 1 teaspoon |  |
+| Units | 1x |  |
 </div>
 </div>
 

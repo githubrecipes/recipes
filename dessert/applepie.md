@@ -1,12 +1,11 @@
-<!-- 
-AUTHOR:Sam Sebastian;
-TITLE:Apple Pie;
-PREP:20min;
-COOK:45min;
- -->
+---
+title: Apple Pie
+author: Sam Sebastian
+prep: 20min
+cook: 45min
+...
 
-<title>Apple Pie</title>
-# Apple Pie
+# %title% | %author% | Prep: %prep% | Cook: %cook%
 
 <div class="container">
 <div class="sidebyside">
@@ -56,6 +55,5 @@ COOK:45min;
 
 
 <div class="noprint">
-    anything within this area will not show up when the user prints the recipe
-## Adapted from: [All Recipes](https://www.allrecipes.com/recipe/9487/pecan-pie/)
+## Adapted from: [Taste of Home](https://www.tasteofhome.com/recipes/apple-pie/)
 </div>

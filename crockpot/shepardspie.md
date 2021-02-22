@@ -1,14 +1,13 @@
-<!-- 
-AUTHOR:Sam Sebastian;
-TITLE:Crockpot Shepard's Pie;
-SOCIALMEDIA:;
-CREDIT:;
-PREP:20min;
-COOK:4-8hr;
- -->
+---
+title: Crockpot Shepard's Pie
+author: Sam Sebastian
+socialmedia:
+credit:
+prep: 20min
+cook: 4-8hr
+...
 
-<title>Crockpot Shepard's Pie</title>
-# Crockpot Shepard's Pie | Prep: 20min | Cook: 4-8 hours
+# %title% | %author% | Prep: %prep% | Cook: %cook%
 
 <div class="container">
 <div class="sidebyside">

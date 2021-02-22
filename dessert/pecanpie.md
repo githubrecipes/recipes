@@ -1,14 +1,13 @@
-<!-- 
-AUTHOR:Sam Sebastian;
-TITLE:Pecan Pie;
-SOCIALMEDIA:;
-CREDIT:;
-PREP:10min;
-COOK:1hr;
- -->
+---
+title: Pecan Pie
+author: Sam Sebastian
+socialmedia:
+credit:
+prep: 10min;
+cook: 1hr;
+...
 
-<title>Pecan Pie</title>
-# Pecan Pie | Prep: 10min | Cook: 1hr
+# %title% | %author% | Prep: %prep% | Cook: %cook%
 
 <div class="container">
 <div class="sidebyside">

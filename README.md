@@ -44,23 +44,29 @@ Use numbered lists for directions either manually (1., 2., etc) or with pandoc s
         * Eg: Cook at **350F** for **4 hours**
 
 ### Metadata
-These meta data tags are used to generate the index pages for each subdirectory. It is important they are included. In order for them to be detected the need to be in between the colon (`:`) and the semicolon (`;`).
+These metadata tags are used to generate the index pages for each subdirectory. It is important they are included at the top of the file in the same format laid out in the template and below!!!
 
-Required (currently the only ones used):
-* `AUTHOR:<persons name>;`
-* `TITLE:<the title to be used on the index page;`
-* `PREP:<prep time for the recipe>;`
-* `COOK:<cook time for the recipe>;`
+Required:
+```
+---
+author: <persons name>
+title: <the title to be used on the index page>
+prep: <prep time for the recipe>
+cook: <cook time for the recipe>
+optional: <you can use your own the following are things i will probably use in some way in the future>
+serves: <how many servings recommended amounts creates>
+cal: <calories for recipe>
+socialmedia: <link to be included if twitter intergration is implemented>
+credit: <link to adapted recipe>
+bake: <bake time (set and forget til timer)>
+...
+```
+Note that there has to be a space after the colon (:)
+You can use the defined metadata (`%title%` will be replace with whatever the contents of the variable is) later on in the file like shown in `applepie.md`.
 
-Optional (to be implemented):
-* `SERVES:<how many servings recommended amounts creates>;`
-* `CAL:<calories for recipe>;`
-* `SOCIALMEDIA:<link to be included if twitter intergration is implemented>;`
-* `CREDIT:<link to adapted recipe>;`
-* `BAKE:<bake time (set and forget til timer)>;`
+The replacement is a bit fussy;
 
-
-
+`Prep: %prep%` works while `Prep:%prep%` does not
 
 ## Writing your own
 1. Create a [new file](https://github.com/githubrecipes/recipes/new/main)

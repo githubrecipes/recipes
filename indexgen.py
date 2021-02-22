@@ -4,10 +4,10 @@ import os
 
 #run in the base directory
 ignore_dirs = [".github", ".git"]
-author_pat = r'AUTHOR:(.*?);'
-title_pat = r'TITLE:(.*?);'
-prep_pat = r'PREP:(.*?);'
-cook_pat = r'COOK:(.*?);'
+author_pat = r'author: (.*?)\n'
+title_pat = r'title: (.*?)\n'
+prep_pat = r'prep: (.*?)\n'
+cook_pat = r'cook: (.*?)\n'
 
 def as_html(md_file):
     return md_file[:-3]+".html"
