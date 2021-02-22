@@ -13,12 +13,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.ref }}
+#           ref: ${{ github.ref }}
           fetch-depth: 0
       - name: Setup Python
         uses: actions/setup-python@v2.2.1
       - name: Find Changed files
-        run: echo "CHANGED_FILES=$(git diff --name-only ${{ github.head_ref }}..${{ github.base_ref }})" >> $GITHUB_ENV
+        run: |
+          git checkout ${{ github.head_ref }}
+          echo "CHANGED_FILES=$(git diff --name-only ${{ github.head_ref }}..${{ github.base_ref }})" >> $GITHUB_ENV
+        
         shell: bash
       - name: Move diff files
         run: |
