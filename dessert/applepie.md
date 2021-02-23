@@ -1,6 +1,7 @@
 ---
 title: Apple Pie
 author: Sam Sebastian
+credit: https://www.tasteofhome.com/recipes/apple-pie/
 prep: 20min
 cook: 45min
 ...
@@ -8,7 +9,7 @@ cook: 45min
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
 %container%
-%sidebyside%
+%directions%
 ## Directions
 (@) Preheat oven to **375F**
 (@) Combine in `small bowl`
@@ -35,7 +36,7 @@ cook: 45min
     - **20-25min**
 %enddiv%
 
-%sidebyside%
+%ingredients%
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---: |
@@ -50,9 +51,8 @@ cook: 45min
 | Pie Crust | 2x |  |
 | Butter | 1 table |  |
 | Egg | 1x | Large |
-%enddiv%
-%enddiv%
+%enddiv%%enddiv%
 
 %noprint%
-## Adapted from: [Taste of Home](https://www.tasteofhome.com/recipes/apple-pie/)
+## Adapted from: [Taste of Home](%credit%)
 %enddiv%

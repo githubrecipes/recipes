@@ -2,15 +2,14 @@
 title: Crockpot Shepard's Pie
 author: Sam Sebastian
 socialmedia:
-credit:
+credit: https://www.recipesthatcrock.com/wprm_print/7898
 prep: 20min
 cook: 4-8hr
 ...
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-%container%
-%sidebyside%
+%container%%directions%
 ## Directions
 (@) Brown ground beef with onions in skillet
 (@) Prep potatoes
@@ -32,13 +31,13 @@ cook: 4-8hr
 (@) Cover and cook
     - high for 4 hours
     - low for 8 hours
-%enddiv%
 
-%sidebyside%
+%enddiv%%ingredients%
+
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---------: |
-| [Ground Beef](test) | 3 lbs |  |
+| Ground Beef | 3 lbs |  |
 | Onion | 1/2 cup | Chopped |
 | Russet Potatoes | 5x | See recipe |
 | Milk | 1 tablespoon | For potatoes |
@@ -49,9 +48,10 @@ cook: 4-8hr
 | Frozen peas | 12 oz |  |
 | Cream of mushroom soup | 10.5 oz |  |
 | Paprika | Sprinkling | Optional |
-%enddiv%
-%enddiv%
+
+%enddiv%%enddiv%
 
 %noprint%
-## Adapted from: [Recipes that crock](https://www.recipesthatcrock.com/wprm_print/7898)
+## Adapted from: [Recipes that crock](%credit%)
+%footer%
 %enddiv%

@@ -2,15 +2,14 @@
 author: Sam Sebastian
 title: Crockpot Irish Beef stew
 socialmedia:
-credit:
+credit: https://www.foodlion.com/recipes/slow-cooker-irish-beef-stew/
 prep: 15min
 cook: 4-8hr
 ...
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-%container%
-%sidebyside%
+%container%%directions%
 ## Directions
 (@) Combine and whisk
     - Salt
@@ -37,7 +36,7 @@ cook: 4-8hr
     - Until beef is falling apart
 %enddiv%
 
-%sidebyside%
+%ingredients%
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---: |
@@ -54,9 +53,8 @@ cook: 4-8hr
 | Potatoes | 2x | 1in pieces |
 | Beef broth | 3 cups |  |
 | Thyme |  | chopped |
-%enddiv%
-%enddiv%
+%enddiv%%enddiv%
 
 %noprint%
-## Adapted from: [Food Lion](https://www.foodlion.com/recipes/slow-cooker-irish-beef-stew/)
+## Adapted from: [Food Lion](%credit%)
 %enddiv%

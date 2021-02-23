@@ -2,7 +2,7 @@
 title: Pecan Pie
 author: Sam Sebastian
 socialmedia:
-credit:
+credit: https://www.allrecipes.com/recipe/9487/pecan-pie/
 prep: 10min
 cook: 1hr
 ...
@@ -10,7 +10,7 @@ cook: 1hr
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
 %container%
-%sidebyside%
+%directions%
 ## Directions
 (@) Preheat oven to **350F**
 (@) In a medium saucepan, combine:
@@ -30,7 +30,7 @@ cook: 1hr
 (@) Bake in preheated oven for **45-50** minutes.
 %enddiv%
 
-%sidebyside%
+%ingredients%
 ## Ingredients
 | Ingredients | Amount |
 | :---------: | :----: |
@@ -49,5 +49,5 @@ cook: 1hr
 
 
 %noprint%
-## Adapted from: [All Recipes](https://www.allrecipes.com/recipe/9487/pecan-pie/)
+## Adapted from: [All Recipes](%credit%)
 %enddiv%
