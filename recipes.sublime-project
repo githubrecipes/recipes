@@ -2,8 +2,11 @@
 	"folders":
 	[
 		{
-			"path": "."
-		}
+            "name": "Github Recipes",
+			"path": ".",
+            "file_exclude_patterns": ["*.html"],
+		},
+
 	],
     "build_systems":
     [
@@ -19,8 +22,14 @@
             // "cmd": ["echo test"],
             // "cmd": ["/usr/bin/pandoc -s --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html $file"],
             // "cmd": ["/usr/bin/pandoc -s --lua-filter=$project_path/replacefilter.lua --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html $file"],
-            "cmd": ["python htmlgrep.py $file | /usr/bin/pandoc -s --lua-filter=$project_path/replacefilter.lua --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html"],
+            "cmd": ["python htmlgrep.py $file | /usr/bin/pandoc -s --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html; mimeopen $file_path/$file_base_name.html"],
+            // "cmd": ["python htmlgrep.py $file | /usr/bin/pandoc -s --lua-filter=$project_path/replacefilter.lua --css=$project_path/styling.css --to=html5 -o $file_path/$file_base_name.html"],
             // "cmd": ["/usr/bin/pandoc -s --css=http://githubrecipes.com/styling.css --to=html5 $file -o $file_path/$file_base_name.html"]
+        },
+        {
+            "selector": "*.py",
+            "shell": true,
+            "cmd": ["python3 $file"],
         }
     ]
 }
