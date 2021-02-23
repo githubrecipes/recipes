@@ -2,21 +2,21 @@
 title: Title
 author: Author
 socialmedia:
-credit:
+credit: credit url
 prep: Xmin
 cook: Yhr
 ...
 
 # %title% | %author% | Prep: %prep% | Cook: %cook%
 
-%container%
-%sidebyside%
+%container%%directions%
+
 ## Directions
 (@) Use this format for numbered instructions
-(@) The table tags make the ingredient list and directions appear side by side.
-%enddiv%
+(@) The container and side-by-side macros make the ingredient list and directions appear side by side.
 
-%sidebyside%
+%enddiv%%ingredients%
+
 ## Ingredients
 | Ingredients | Amount | Notes |
 | :---------: | :----: | :---: |
@@ -25,10 +25,10 @@ cook: Yhr
 | Units | tablespoon |  |
 | Units | 1 teaspoon |  |
 | Units | 1x |  |
-%enddiv%
-%enddiv%
+
+%enddiv%%enddiv%
 
 %noprint%
-    anything within this area will not show up when the user prints the recipe
-## Adapted from: [All Recipes](https://www.allrecipes.com/recipe/9487/pecan-pie/)
+## Adapted from: [All Recipes](%credit%)
+%footer%
 %enddiv%
