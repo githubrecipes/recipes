@@ -13,7 +13,7 @@ on:
 
 
 env:
-  FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner"
+  FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner ./sidedish"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,8 +27,8 @@ jobs:
         uses: actions/setup-python@v2.2.1
       - name: Generate index.md files
         run: python indexgen.py
-      - name: Find Changed files
-        run: echo "CHANGED_FILES="$(find -type f -name "*.md")"" >> $GITHUB_ENV
+      - name: Find Markdown files
+        run: echo "MD_FILES="$(find -type f -name "*.md")"" >> $GITHUB_ENV
         shell: bash
       - name: Move diff files
         run: |
@@ -38,19 +38,18 @@ jobs:
             mkdir output/$f
           done
           mv styling.css output/styling.css
-          mv replacefilter.lua output/replacefilter.lua
-          for f in $CHANGED_FILES;
+          for f in $MD_FILES;
           do
             python htmlgrep.py $f > output/$f
           done
-          echo $CHANGED_FILES > output/changed.txt
+          echo $MD_FILES > output/markdown.txt
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: output
           path: output
   pandoc_build:
-    name: Pandoc build on changed files
+    name: Pandoc build on markdown files
     needs: get_markdown_files
     container: pandoc/core:2.9
     runs-on: ubuntu-latest
@@ -69,10 +68,10 @@ jobs:
           mv styling.css build/styling.css
       - name: Run pandoc
         run: |
-          CHANGED_FILES=`cat changed.txt`
-          for f in $CHANGED_FILES;
+          MD_FILES=`cat markdown.txt`
+          for f in $MD_FILES;
           do
-            pandoc --standalone --lua-filter=replacefilter.lua --css=https://githubrecipes.com/styling.css --to=html5 -o "./build/${f:0:-3}.html" "$f"
+            pandoc --standalone --css=https://githubrecipes.com/styling.css --to=html5 -o "./build/${f:0:-3}.html" "$f"
           done
       - name: Upload artifact
         uses: actions/upload-artifact@master
