@@ -34,7 +34,7 @@ with open('footer.md', 'r') as f:
 frags.append(['%footer%', footer])
 
 #get metadata tags
-metadata_pat = r'^(.*?): (.*?)$'
+metadata_pat = r'^(.*?):(.*?)$'
 with open(filename, 'r') as f:
     data = f.read()
     for line in data.split("\n"):
@@ -43,7 +43,7 @@ with open(filename, 'r') as f:
         match = re.match(metadata_pat, line)
         if match:
             var_name = "%"+match.group(1)+"%"
-            var_val = match.group(2)
+            var_val = match.group(2).strip()
             frags.append([var_name, var_val])
 
     for item in frags:
