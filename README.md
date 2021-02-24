@@ -106,6 +106,7 @@ To build the website locally:
     
     `git clone https://github.com/githubrecipes/recipes.git`
 2. Install [`pandoc`](https://pandoc.org/installing.html)
+    The 2.11.4 tag is used to build via the github actions. Make sure that is the one that is installed.
 3. If you use [sublime text 3](https://www.sublimetext.com/3) you can open the folder as a project and just build (`Ctrl+b`) individual files.
 4. To build the file you're working on locally;
     
