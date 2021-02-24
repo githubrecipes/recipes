@@ -51,7 +51,7 @@ jobs:
   pandoc_build:
     name: Pandoc build on markdown files
     needs: get_markdown_files
-    container: pandoc/core:2.9
+    container: pandoc/core:2.11.4
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact files
