@@ -46,26 +46,22 @@ Use numbered lists for directions either manually (1., 2., etc) or with pandoc s
 ### Metadata
 These metadata tags are used to generate the index pages for each subdirectory. It is important they are included at the top of the file in the same format laid out in the template and below!!!
 
-Only the first four are required. The rest are not currently used but maybe in the future.
+Only the first five are required. The rest are not currently used but maybe in the future.
 ```
 ---
 author: <persons name>
 title: <the title to be used on the index page>
+credit: <link to adapted recipe>
 prep: <prep time for the recipe>
 cook: <cook time for the recipe>
 serves: <how many servings recommended amounts creates>
 cal: <calories for recipe>
 socialmedia: <link to be included if twitter intergration is implemented>
-credit: <link to adapted recipe>
 bake: <bake time (set and forget til timer)>
 ...
 ```
-Note that there has to be a space after the colon (:)
+
 You can use the defined metadata (`%title%` will be replace with whatever the contents of the variable is) later on in the file like shown in `applepie.md`.
-
-The replacement is a bit fussy;
-
-`Prep: %prep%` works while `Prep:%prep%` does not
 
 ## Writing your own
 1. Create a [new file](https://github.com/githubrecipes/recipes/new/main)
@@ -81,7 +77,7 @@ The replacement is a bit fussy;
 
 You can also edit the file locally if you don't like the github editor. 
 
-If you want to preview how the file is going to look when published check out the [`Development`](#Development) section below.
+If you want to preview exactly how the file is going to look when published check out the [`Development`](#Development) section below.
 
 You can create your own folder and file using the github.com interface. Only create your own folder if your recipe doesn't fall into the other categories.
 
@@ -123,17 +119,10 @@ CSS has been adapted from [Pan Am: *Simple CSS for Pandoc*](https://benjam.info/
 
 You can open a PR in this Repo if you have any changes/suggestions for the CSS used by the website.
 
-I'll eventually add something that minimizes the CSS in the github action before committing to pages repo.
-
 ## TODO
 1. Minimize CSS for committing to pages repo
 2. Favicon/icon for github recipes
 3. Github action to build PR files so people can preview what it will look like
 4. Metadata system
 5. Twitter posting when new item added.
-6. Main index page
-7. Titles on index pages!
-8. Back links
-9. "up in the file tree" links
-    IE clicking this on the pecan pie page brings you back to desserts
-10. View source function on each web page
+6. View source function on each web page
