@@ -17,7 +17,7 @@ cook: 15min
     1. Cook until browned
     2. Break apart sausage as you cook.
 (@) Drain Grease and return skillet to stovetop over medium-heat
-(@) Add cream cheese and Rotel to skillet
+(@) Add cream cheese and Tomatoes to skillet
 (@) Stir frequently until cream cheese is completely melted and mixed
 (@) Serve warm
 
