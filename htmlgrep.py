@@ -20,6 +20,7 @@ frags = [
     ['%header%', '<div class="header">'],
     ['%generated_filename%', generated_filename],
     ['%base_filename%', generated_filename[:-5]+".md"],
+    ['%centered%','<div style="text-align:center;">'],
 ]
 
 if "index" in filename:
