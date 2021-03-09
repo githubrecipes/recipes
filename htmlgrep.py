@@ -76,7 +76,10 @@ with open(filename, 'r') as f:
         base = item[1:-1]
         pat = r'%('+base+')\*(.*?)%'
         print(pat)
-        data = re.sub(pat, replacement, data)
+        try:
+            data = re.sub(pat, replacement, data)
+        except:
+            pass
 
 # output to stdin to pandoc
 print(data)
