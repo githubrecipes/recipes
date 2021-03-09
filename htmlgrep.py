@@ -75,6 +75,7 @@ with open(filename, 'r') as f:
     for item in frags:
         base = item[1:-1]
         pat = r'%('+base+')\*(.*?)%'
+        print(pat)
         data = re.sub(pat, replacement, data)
 
 # output to stdin to pandoc
