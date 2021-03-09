@@ -58,7 +58,7 @@ cook: 30min
 | Vanilla extract | 1 tea |  |
 | Blueberries | 1 1/2 cup | frozen |
 
-%enddiv%%enddiv%
+%enddiv*2%
 
 %noprint%
 ## Adapted from: [Sally-s Baking Addiction](%credit%)
