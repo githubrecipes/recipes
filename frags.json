@@ -1,0 +1,14 @@
+{
+    "container":"<div class=\"container\">",
+    "directions":"<div class=\"directions\">",
+    "ingredients":"<div class=\"ingredients\">",
+    "sidebyside":"<div class=\"sidebyside\">",
+    "enddiv":"</div>",
+    "noprint":"<div class=\"noprint\">",
+    "header":"<div class=\"header\">",
+    "centered":"<div style=\"text-align:center;\">",
+    "pfp": "<div class=\"pfp\">",
+    "base_filename":["input_file_name"],
+    "generated_filename":["output_file_name"],
+    "footer": ["file_content", "footer.md"]
+}
