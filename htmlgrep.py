@@ -3,6 +3,7 @@ import re
 import sys
 import json
 import argparse
+from pathlib import Path
 
 def replacement(match):
     return frags["%"+match.group(1)+"%"]*int(match.group(2))
@@ -16,13 +17,9 @@ parser.add_argument("-o", "--output", dest="output", action="store", help="Outpu
 
 args = parser.parse_args()
 
-filename = args.input
+filename = Path(args.input)
+generated_filename = filename.stem+".html"
 
-if "/" in filename:
-    rindex = filename.rindex("/")
-    generated_filename = filename[rindex+1:-3]+".html"
-else:
-    generated_filename = filename[:-3]+".html"
 
 # load in all of the frags
 frags = {}
@@ -39,7 +36,7 @@ with open(args.fragment_file, 'r') as f:
                     frags[name] = fc.read()
                     files.append(name)
             elif content[0] == "input_file_name":
-                frags[name] = filename
+                frags[name] = filename.name
             elif content[0] == "output_file_name":
                 frags[name] = generated_filename
         else:
@@ -51,7 +48,7 @@ for file in files:
         data = data.replace(item, frags[item])
     frags[file] = data
 
-if "index" in filename:
+if "index" in filename.name:
     frags['%up%'] = 'https://githubrecipes.com'
 else:
     frags['%up%'] = 'index.html'
