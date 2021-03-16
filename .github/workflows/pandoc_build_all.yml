@@ -13,7 +13,7 @@ on:
 
 
 env:
-  FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner ./sidedish"
+  FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner ./sidedish ./mealprep"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -96,11 +96,4 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PAT }}
-          
-      
-        
-      
-      
-      
-                
-                
+
