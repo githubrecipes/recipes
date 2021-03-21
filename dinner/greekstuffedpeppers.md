@@ -35,9 +35,11 @@ total: 70min
 - 3 red bell peppers, halved lengthwise, cores and ribs removed
 - 2 (14 1/2-ounce) cans low-sodium stewed tomatoes, finely chopped
 - 1/3 cup crumbled feta cheese
-%enddiv*2%
 
 %qrcode%
+%enddiv*2%
+
+
 
 %noprint%
 ## Adapted from: [www.foodnetwork.com](%credit%)
