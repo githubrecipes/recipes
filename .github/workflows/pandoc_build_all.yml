@@ -13,7 +13,7 @@ on:
 
 
 env:
-  FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner ./sidedish ./mealprep"
+  FOLDER_LIST: "./crockpot ./dessert ./breakfast ./lunch ./dinner ./sidedish ./mealprep ./assets"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,10 +38,13 @@ jobs:
             mkdir output/$f
           done
           mv styling.css output/styling.css
+          python -m pip install --upgrade pip
+          pip install qrcode
           for f in $MD_FILES;
           do
             python htmlgrep.py $f > output/$f
           done
+          cp assets/* output/assets/
           echo $MD_FILES > output/markdown.txt
       - name: Upload artifact
         uses: actions/upload-artifact@master
@@ -66,6 +69,7 @@ jobs:
             mkdir build/$f
           done
           mv styling.css build/styling.css
+          cp assets/* build/assets/
       - name: Run pandoc
         run: |
           MD_FILES=`cat markdown.txt`
