@@ -11,5 +11,5 @@
     "base_filename":["input_file_name"],
     "generated_filename":["output_file_name"],
     "footer": ["file_content", "footer.md"],
-    "qrcode": ["script", "./qrgen.py", "credit", "title"]
+    "qrcode": ["script", "python3", "./qrgen.py", "credit", "title"]
 }
