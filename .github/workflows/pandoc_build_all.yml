@@ -33,6 +33,7 @@ jobs:
       - name: Move diff files
         run: |
           mkdir output
+          mkdir assets
           for f in $FOLDER_LIST;
           do
             mkdir output/$f
