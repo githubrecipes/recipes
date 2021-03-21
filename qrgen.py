@@ -6,9 +6,9 @@ import sys
 img = qrcode.make(sys.argv[1])
 
 replacements = ["\"", ":", "<", ">", "|", "*", "?"]
+title = sys.argv[2].lower().replace(" ", "-")
 for item in replacements:
     title = title.replace(item, "")
-title = sys.argv[2].lower().replace(" ", "-")
 
 file = title+".png"
 
