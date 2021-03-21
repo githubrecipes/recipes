@@ -39,7 +39,7 @@ jobs:
           done
           mv styling.css output/styling.css
           python3 -m pip install --upgrade pip
-          pip3 install qrcode
+          pip3 install qrcode[pil]
           for f in $MD_FILES;
           do
             python3 htmlgrep.py $f > output/$f
