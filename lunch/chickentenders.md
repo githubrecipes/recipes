@@ -34,6 +34,7 @@ cook: 20min
 (@) Bake for **10** minutes
 (@) Flip
 (@) Bake for **5-10** minutes
+    - Optionally broil at end 2-3 min for crispyness
 (@) Enjoy!
 
 %enddiv%%ingredients%
@@ -56,6 +57,13 @@ cook: 20min
 | Onion Powder | 1/2 tea |  |
 | Parmesan Cheese | 1/4 cup |  |
 %enddiv%%enddiv%
+
+## Honey Mustard Sauce
+(@) Mix
+    - 1/2 cup mayo
+    - 1/4 cup Dijon mustard
+    - 1/4 cup honey
+
 
 %noprint%
 ## Adapted from: [Cafe Delites](%credit%)
