@@ -37,6 +37,8 @@ total: 70min
 - 1/3 cup crumbled feta cheese
 %enddiv*2%
 
+%qrcode%
+
 %noprint%
 ## Adapted from: [www.foodnetwork.com](%credit%)
 %footer%
