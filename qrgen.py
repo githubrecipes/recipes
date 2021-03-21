@@ -3,7 +3,11 @@
 import qrcode
 import sys
 
-img = qrcode.make(sys.argv[1])
+qr = qrcode.QRCode()
+qr.add_data(sys.argv[1])
+
+# img = qrcode.make(sys.argv[1])
+img = qr.make_image(back_color="transparent")
 
 replacements = ["\"", ":", "<", ">", "|", "*", "?"]
 title = sys.argv[2].lower().replace(" ", "-")
