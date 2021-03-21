@@ -38,11 +38,11 @@ jobs:
             mkdir output/$f
           done
           mv styling.css output/styling.css
-          python -m pip install --upgrade pip
-          pip install qrcode
+          python3 -m pip install --upgrade pip
+          pip3 install qrcode
           for f in $MD_FILES;
           do
-            python htmlgrep.py $f > output/$f
+            python3 htmlgrep.py $f > output/$f
           done
           cp assets/* output/assets/
           echo $MD_FILES > output/markdown.txt
