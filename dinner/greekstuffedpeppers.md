@@ -13,33 +13,46 @@ total: 70min
 ## Directions
 
 (@) Preheat the oven to 350 degrees F.
-(@) In a large bowl, combine the beef, spinach, zucchini, onion, bulgur, egg, oregano, salt and a few grinds of pepper.
+(@) In a large bowl
+    -  Combine The Beef
+    -  Spinach
+    -  Zucchini
+    -  Onion
+    -  Bulgur
+    -  Egg
+    -  Oregano
+    -  Salt And A Few Grinds Of Pepper.
 (@) Mix until thoroughly combined.
 (@) Arrange the pepper halves cut side up in a 9-by-13-inch baking dish and fill each pepper half with the meat mixture.
 (@) Pour the tomatoes over the peppers and sprinkle with the feta cheese.
 (@) Cover with foil and bake for 30 minutes.
 (@) Uncover and bake until the meat mixture is completely cooked and the peppers are tender, about 25 minutes longer.
-(@) 
+
 %enddiv%%ingredients%
+
 ## Ingredients
-- Deselect All
-- 1 pound lean ground beef
-- 1 (10-ounce) package frozen chopped spinach, thawed and squeezed dry
-- 1 medium zucchini, coarsely grated (about 2 cups)
-- 1 small onion, minced (about 1 cup)
-- 1/2 cup bulgur
-- 1 egg, lightly beaten
-- 1/2 teaspoon dried oregano
-- 1/2 teaspoon salt
-- Freshly ground black pepper
-- 3 red bell peppers, halved lengthwise, cores and ribs removed
-- 2 (14 1/2-ounce) cans low-sodium stewed tomatoes, finely chopped
-- 1/3 cup crumbled feta cheese
+- 1 Pound Lean Ground Beef
+- 1 (10-Ounce) Package Frozen Chopped Spinach
+    -  Thawed And Squeezed Dry
+- 1 Medium Zucchini
+    -  Coarsely Grated (About 2 Cups)
+- 1 Small Onion
+    -  Minced (About 1 Cup)
+- 1/2 Cup Bulgur
+- 1 Egg
+    -  Lightly Beaten
+- 1/2 Teaspoon Dried Oregano
+- 1/2 Teaspoon Salt
+- Freshly Ground Black Pepper
+- 3 Red Bell Peppers
+    -  Halved Lengthwise
+    -  Cores And Ribs Removed
+- 2 (14 1/2-Ounce) Cans Low-Sodium Stewed Tomatoes
+    -  Finely Chopped
+- 1/3 Cup Crumbled Feta Cheese
 
 %qrcode%
 %enddiv*2%
-
-
 
 %noprint%
 ## Adapted from: [www.foodnetwork.com](%credit%)
