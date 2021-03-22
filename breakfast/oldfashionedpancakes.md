@@ -4,7 +4,7 @@ author: Sam
 socialmedia:
 credit: https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/
 prep: 5min
-cook: 15hr
+cook: 15min
 ...
 %header%
 
